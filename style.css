@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #121212;
+    scroll-behavior: smooth;
+}
+
+.search-bar{
+    width: 100%;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    background-color: #222;
+}
+#search-input{
+    border: none;
+    padding: 0.2rem 0.5rem;
+    flex-basis: 85%;
+    outline: none;
+    appearance: none;
+}
+#search-form{
+    border: 1px solid lightgrey;
+    background-color: white;
+    padding: 0.2rem 0.5rem;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
+}
+#search-form i{
+    color: gray;
+}
+
+#search-form button{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.logo{
+    width: 70px;
+    margin-right: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 183px;
+}
+
+#search-input #search-form{
+    border: 1px solid salmon;
+} 
+.movies-grid{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 30px 20px;
+    padding: 2rem;
+    width: 80%;
+}
+.movie-card{
+    cursor: pointer;
+    background-color: #222;
+    border-radius: 5px;
+}
+.movie-card img{
+    width: 100%;
+    height: 78%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.movie-card h1{
+    font-size: 17px;
+    color: white;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+.movie-card p{
+    color: white;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+.grid-title{
+    color: #5AF;
+    font-family: 'Baloo Bhaijaan 2';
+    font-size: 22px;
+    font-weight: 600;
+    padding: 2rem 11.5rem 0 11.5rem;
+}
+
+footer{
+    width: 100%;
+    padding: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer  button{
+    background-color: gold;
+    padding: 0.5rem 2.2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+footer .icon{
+    color: white;
+    margin: 1rem 0;
+    padding: 0.7rem 0;
+    font-size: 22px;
+}
+footer .icon i{
+    padding: 1.1rem 1.1rem;
+    cursor: pointer;
+}
+
+footer .icon i:hover{
+    background-color: #222;
+    border-radius: 50%;
+}
+footer .content-1{
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .content-1 a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+footer .content-1 a span,.content-2 a span{
+    font-size: 17px;
+}
+footer .content-1 a span:hover{
+    text-decoration: underline;
+}
+footer .content-1 a i,.content-2 a i{
+    font-size: 10px;
+}
+
+footer .content-2{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .content-2 a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    font-size: 17px;
+}
+
+footer .copyright{
+    padding: 2rem 1rem;
+    color: 	#B8B8B8;
+    font-size: 14px;
+    font-weight: 500;
+}
+footer .copyright i{
+    font-size: 12px;
+}
+
+.content{
+    width: 100%;
+    padding: 2rem 10rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.content h3{
+    color: white;
+    padding: 1rem 1.7rem;
+}
+
+.single-content{
+    width: 90%;
+    display: flex;
+}
+.single-content .desc{
+    flex-basis: 25%;
+}
+.single-content{
+    color: white;
+    padding: 0 1.5rem;
+}
+.single-description{
+    padding-left: 1.5rem;
+}
+
+.single-description:nth-of-type(1){
+    margin-bottom: 1rem;
+}
+.single-description div{
+    padding: 0.7rem 0;
+}
+.single-description div p{
+    margin-bottom: 0.3rem;
+}
+
+
+
+@media(max-width: 799px){
+    .logo {
+        top: 0;
+        left: 105px;
+    }
+    .grid-title {
+        padding: 2rem 7rem 0 7rem;
+    }
+    .content {
+        padding: 2rem 5rem;
+    }
+    .single-content {
+        width: 100%;
+    }
+}
+
+@media(max-width: 599px){
+    .logo {
+        top: 0;
+        left: 65px;
+        margin-right: 20px;
+    }
+    .grid-title {
+        padding: 2rem 2rem 0 4.5rem;
+    }
+
+    #search-form {
+        border: 1px solid lightgrey;
+        background-color: white;
+        padding: 0.2rem 0.5rem;
+        width: 70%;
+        margin-left: 120px;
+    }
+    #search-input {
+        border: none;
+        padding: 0.2rem 0.5rem;
+        flex-basis: 60%;
+    }
+    footer{
+        padding: 1rem;
+    }
+    footer .content-1{
+        flex-wrap: wrap;
+    }
+    footer .content-1 a{
+        padding: 0.5rem 0.5rem;
+    }
+    footer .content-1 a span,.content-2 a span{
+        font-size: 14px;
+    }
+    footer .content-2{
+        flex-wrap: wrap;
+    }
+    footer .content-2 a{
+        padding: 0.5rem 0.5rem;
+        font-size: 14px;
+    }
+    .content {
+        padding: 2rem 2.2rem;
+    }
+    .single-content {
+        width: 100%;
+        flex-direction: column;
+    }
+    .single-description {
+        padding-left: 0;
+        padding-top: 1rem;
+    }
+}
